@@ -1,6 +1,8 @@
 server:
   port: 8080
 spring:
+  application:
+    name: "accounts"       #same as what is defined in config server yaml file name should match
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
@@ -14,3 +16,42 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  config:
+    import: "optional:configserver:http://localhost:8071/"   # optional if u want your service to go up without config server
+#      - "application_qa.yml"   //for local yaml configuration
+#      - "application_prod.yml"
+  profiles:
+    active: "prod"     #can have qa and default also
+#      - "default"
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"       # if only want refresh property then give "refresh" to change property at runtime without restarting service
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+build:
+  version: "3.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related local APIs "
+  contactDetails:
+    name: "John Doe - Developer"
+    email: "john@eazybank.com"
+  onCallSupport:
+    - (555) 555-1234
+    - (555) 523-1345

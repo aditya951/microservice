@@ -2,6 +2,7 @@ E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernete
 E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernetes\code\mine\section2\loans\src\main\java\com\eazybytes\loans\audit\AuditAwareImpl.java
 E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernetes\code\mine\section2\loans\src\main\java\com\eazybytes\loans\entity\Loans.java
 E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernetes\code\mine\section2\loans\src\main\java\com\eazybytes\loans\entity\BaseEntity.java
+E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernetes\code\mine\section2\loans\src\main\java\com\eazybytes\loans\dto\LoansContactInfoDto.java
 E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernetes\code\mine\section2\loans\src\main\java\com\eazybytes\loans\dto\ResponseDto.java
 E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernetes\code\mine\section2\loans\src\main\java\com\eazybytes\loans\mapper\LoansMapper.java
 E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernetes\code\mine\section2\loans\src\main\java\com\eazybytes\loans\controller\LoansController.java

@@ -17,4 +17,5 @@ E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernete
 E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernetes\code\mine\section2\accounts\src\main\java\com\eazybytes\accounts\entity\Accounts.java
 E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernetes\code\mine\section2\accounts\src\main\java\com\eazybytes\accounts\exception\CustomerAlreadyExistsException.java
 E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernetes\code\mine\section2\accounts\src\main\java\com\eazybytes\accounts\service\impl\AccountsServiceImpl.java
+E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernetes\code\mine\section2\accounts\src\main\java\com\eazybytes\accounts\dto\AccountsContactInfoDto.java
 E:\interviews\udemy\8[NEW] Master Microservices with SpringBoot,Docker,Kubernetes\code\mine\section2\accounts\src\main\java\com\eazybytes\accounts\mapper\AccountsMapper.java
