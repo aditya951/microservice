@@ -38,8 +38,15 @@ management:
       probes:
         enabled: true
 
-encrypt:
+encrypt:  # to encrypt some value while saving it in github config file see github code 
   key: "45D81EC1EF61DF9AD8D3E5BB397F9"
+# email: "{cipher}58b34956ac623d4e88fb109d44f6eefd4df15ae5f5b3df009279d5dd76c8c2163be757710ca6c727b8391685c012ff69"   // like this it will
+#automatically decrypt and show in service  see postman to decrypt
+
+#curl --location 'http://localhost:8071/encrypt' \
+#--header 'Content-Type: text/plain' \
+#--data-raw 'aishwarya@eazybank.com'
+
 
 server:
   port: 8071
