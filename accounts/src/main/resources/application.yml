@@ -55,7 +55,11 @@ management:
 endpoints:
   shutdown:
     enabled: true
-        
+logging:
+  level:
+    com:
+      eazybytes:
+        accounts: DEBUG        #package name
 eureka:
   instance:
     preferIpAddress: true
