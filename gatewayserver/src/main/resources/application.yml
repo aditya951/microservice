@@ -9,6 +9,15 @@ spring:
         locator:
           enabled: false
           lowerCaseServiceId: true   #  to convert service name from upper to lower case in URL eg ACCOUNT to account
+      httpclient:
+        connect-timeout: 1000    # for timeout if service not respond
+        response-timeout: 2s
+  data:
+    redis:     #start redis from docker
+      connect-timeout: 2s
+      host: localhost
+      port: 6379
+      timeout: 1s
 
 management:
   endpoints:
@@ -33,4 +42,12 @@ logging:
     com:
       eazybytes:
         gatewayserver: DEBUG
+
+resilience4j.circuitbreaker:
+  configs:
+    default:    # if want this propertiy for certain endpoint then give name accountsCircuitBreaker as defined in main class
+      slidingWindowSize: 10  # min number of request to change status from close
+      permittedNumberOfCallsInHalfOpenState: 2   # allow 2 request to decide whether to go open or close
+      failureRateThreshold: 50   #  if 50% of request failed move to open state
+      waitDurationInOpenState: 10000  # wait 10 sec to move to half open  
 
