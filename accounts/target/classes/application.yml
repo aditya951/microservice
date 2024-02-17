@@ -45,6 +45,10 @@ management:
   info:
     env:
       enabled: true  #for eureka registration
+  metrics:
+    tags:
+      application: ${spring.application.name}     # to show names in service name logger
+
   health:
     readiness-state:
       enabled: true
@@ -64,6 +68,9 @@ logging:
     com:
       eazybytes:
         accounts: DEBUG        #package name
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+
 eureka:
   instance:
     preferIpAddress: true

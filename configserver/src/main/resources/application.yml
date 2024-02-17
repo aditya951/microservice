@@ -37,6 +37,10 @@ management:
     health:
       probes:
         enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+        
 
 encrypt:  # to encrypt some value while saving it in github config file see github code 
   key: "45D81EC1EF61DF9AD8D3E5BB397F9"
@@ -50,3 +54,7 @@ encrypt:  # to encrypt some value while saving it in github config file see gith
 
 server:
   port: 8071
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"  
