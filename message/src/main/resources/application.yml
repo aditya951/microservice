@@ -1,0 +1,22 @@
+server:
+  port: 9010
+
+spring:
+  application:
+    name: "message"
+  cloud:
+    function:
+      definition: email|sms # to compose these 2 function into single unit(both function will run at once)
+    stream:
+      bindings:
+        emailsms-in-0:
+          destination: send-communication     # this is queue name from where this svc will look for msg
+          group: ${spring.application.name}
+        emailsms-out-0:
+          destination: communication-sent   # this is exchange name in which event is put
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    connection-timeout: 10s
